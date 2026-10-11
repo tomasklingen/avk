@@ -1,0 +1,154 @@
+/* Based on the Cayman GitHub Pages theme */
+
+/* Open Sans, latin subset, from @fontsource/open-sans 5.3.0. License: assets/fonts/OFL.txt */
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("assets/fonts/open-sans-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("assets/fonts/open-sans-latin-700-normal.woff2") format("woff2");
+}
+
+:root {
+  --text: #606c71;
+  --muted: #819198;
+  --accent: #159957;
+  --accent-alt: #155799;
+  --rule: #eff0f1;
+  --quote-border: #dce6f0;
+  --notice-background: #f2f6fa;
+  --background: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--background);
+}
+
+#skip-to-content {
+  position: absolute;
+  left: -9999px;
+}
+
+#skip-to-content:focus {
+  left: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--background);
+  color: var(--accent);
+}
+
+.page-header {
+  color: #fff;
+  text-align: center;
+  background-color: var(--accent);
+  background-image: linear-gradient(120deg, var(--accent-alt), var(--accent));
+  padding: 5rem 6rem;
+}
+
+.project-name {
+  margin: 0;
+  font-size: 3.25rem;
+}
+
+.main-content {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 2rem 6rem;
+  font-size: 1.1rem;
+  word-wrap: break-word;
+}
+
+.notice {
+  padding: 1rem 1.25rem;
+  background-color: var(--notice-background);
+  border-left: 0.3rem solid var(--accent);
+}
+
+.notice p {
+  margin: 0;
+}
+
+.notice p + p {
+  margin-top: 0.5rem;
+}
+
+.main-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  color: var(--accent);
+}
+
+.portrait {
+  float: left;
+  margin: 0 2em 1em 0;
+}
+
+hr {
+  clear: both;
+  height: 2px;
+  margin: 1rem 0;
+  border: 0;
+  background-color: var(--rule);
+}
+
+blockquote {
+  margin: 0;
+  padding: 0 1rem;
+  color: var(--muted);
+  border-left: 0.3rem solid var(--quote-border);
+}
+
+@media (width < 64em) {
+  .page-header {
+    padding: 3rem 4rem;
+  }
+
+  .project-name {
+    font-size: 2.25rem;
+  }
+
+  .main-content {
+    padding: 2rem 4rem;
+  }
+}
+
+@media (width < 42em) {
+  .page-header {
+    padding: 2rem 1rem;
+  }
+
+  .project-name {
+    font-size: 1.75rem;
+  }
+
+  .main-content {
+    padding: 2rem 1rem;
+    font-size: 1rem;
+  }
+
+  .portrait {
+    float: none;
+    display: block;
+    margin: 0 0 1rem;
+  }
+}
